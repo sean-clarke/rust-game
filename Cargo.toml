@@ -5,3 +5,4 @@ authors = ["sean-clarke <sean.alexander.clarke@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+winit = "0.20.0-alpha5"
