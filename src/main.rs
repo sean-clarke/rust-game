@@ -37,13 +37,13 @@ fn main() {
 
 	// Start Game Loop
 	event_loop.run(move |event, _, control_flow| {
-        match event {
-            Event::WindowEvent {
-                event: WindowEvent::CloseRequested,
-                window_id,
-            } if window_id == window.id() => *control_flow = ControlFlow::Exit,
-            _ => *control_flow = ControlFlow::Poll,
-        }
+		match event {
+			Event::WindowEvent {
+				event: WindowEvent::CloseRequested,
+				window_id,
+			} if window_id == window.id() => *control_flow = ControlFlow::Exit,
+			_ => *control_flow = ControlFlow::Poll,
+		}
 
 		delta = timer.elapsed();
 		timer += delta;
@@ -62,5 +62,5 @@ fn main() {
 			println!("time remaining {}", game_state.timer);
 			timer_refresh += 1_f64;
 		}
-    });
+	});
 }
